@@ -51,20 +51,6 @@ let Procesador = (function(){
         return process;
     }
 
-    const search = (process) => {
-        let aux = inicio;
-        if(aux != null){
-            while(aux != process && aux.siguiente != inicio){
-                aux = aux.siguiente;
-            }
-            if (aux == process){
-                return aux;
-            } else {
-                return console.error('Error', 'buscar');
-            }
-        }
-    }
-
     const delProcess = (process) => {
         if(process == inicio && inicio.anterior == inicio && inicio.siguiente == inicio){
             inicio = null;
